@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import dbConnect from '../utils/dbConnect'
 
 export default function Home() {
   return (
@@ -17,6 +16,5 @@ export default function Home() {
 }
 
 export async function getServerSideProps() {
-  await dbConnect()
   return ({props: {}})
 }
